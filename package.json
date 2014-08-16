@@ -1,0 +1,37 @@
+{
+  "name": "half-n-half",
+  "description": "Async friendly javascript",
+  "version": "0.1.0",
+  "homepage": "https://github.com/osuushi/half-n-half",
+  "author": {
+    "name": "Spencer Cohen",
+    "email": "sc@moosoftware.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osuushi/half-n-half.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osuushi/half-n-half/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/osuushi/half-n-half/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/half-n-half",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": []
+}
