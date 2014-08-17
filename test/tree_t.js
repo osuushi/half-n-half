@@ -27,7 +27,7 @@ function testTreesEqual(test, a, b, message) {
 }
 
 function loadTree(name) {
-  return tree.decorate(esprima.parse(fixtures(name)));
+  return tree.decorate(esprima.parse(fixtures(name), {range: true}));
 }
 
 exports['Tree utilities'] = {

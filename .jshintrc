@@ -11,5 +11,9 @@
   "boss": true,
   "eqnull": true,
   "node": true,
-  "predef": [ "_" ]
+  "globals": {
+    "_": false,
+    "fixtures": true,
+    "AST": true,
+  }
 }
