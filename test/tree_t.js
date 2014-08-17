@@ -1,7 +1,7 @@
 var tree = require('../lib/tree.js');
 var esprima = require('esprima');
 var escodegen = require('escodegen');
-var fixtures = require('./fixtures');
+
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit

@@ -8,7 +8,9 @@ exports['AST'] = {
     };
     var expected = AST.fixture('template-after');
     template.template(context);
-    test.expect(template.isEqual(expected), 'tree should template correctly');
+    template.normalize();
+    expected.normalize();
+    test.equal(template.toString(), expected.toString(), 'tree should template correctly');
     test.done();
   }
 };
