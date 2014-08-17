@@ -1,4 +1,5 @@
 function foo () {
-  _: a = someMethod();
+  $: a = someMethod();
+  $$$;
   return a;
 }
