@@ -36,9 +36,9 @@ exports['Tree utilities'] = {
     var ast = esprima.parse(src);
     tree.decorate(ast);
     tree.walk(ast, function (node) {
-      if (!node._parentage) { return; }
+      if (!node._relation) { return; }
 
-      var actualNode = tree.getNodeAt(node._parentage);
+      var actualNode = tree.getNodeAt(node._relation);
       test.equal(actualNode, node, 'should be able to find every node');
     });
     test.done();
