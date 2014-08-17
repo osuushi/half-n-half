@@ -59,4 +59,16 @@ exports['Tree utilities'] = {
     testTreesEqual(test, before, orig, 'should swap them back');
     test.done();
   },
+
+  'insert nodes': function (test) {
+    var actual = AST.fixture('insert/before');
+    var middle = AST.fixture('insert/middle').tree.body;
+    var expected = AST.fixture('insert/after');
+    var cond = tree.findOne(actual.tree, function (node) {
+      return node.type === 'IfStatement';
+    });
+    tree.insert(cond.consequent, 'body', 1, middle);
+    test.equal(actual.toString(), expected.toString());
+    test.done();
+  },
 };

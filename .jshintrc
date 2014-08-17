@@ -14,6 +14,6 @@
   "globals": {
     "_": false,
     "fixtures": true,
-    "AST": true,
+    "AST": true
   }
 }

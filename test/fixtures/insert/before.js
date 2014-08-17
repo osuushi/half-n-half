@@ -1,0 +1,4 @@
+if (foo) {
+  first();
+  last();
+}
