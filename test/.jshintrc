@@ -11,5 +11,5 @@
   "boss": true,
   "eqnull": true,
   "node": true,
-  "predef": [ "_" ]
+  "predef": [ "_", "fixtures", "AST"]
 }
