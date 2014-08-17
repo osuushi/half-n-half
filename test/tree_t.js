@@ -63,12 +63,21 @@ exports['Tree utilities'] = {
   'insert nodes': function (test) {
     var actual = AST.fixture('insert/before');
     var middle = AST.fixture('insert/middle').tree.body;
-    var expected = AST.fixture('insert/after');
     var cond = tree.findOne(actual.tree, function (node) {
       return node.type === 'IfStatement';
     });
     tree.insert(cond.consequent, 'body', 1, middle);
-    test.equal(actual.toString(), expected.toString());
+    test.equal(actual.toString(), AST.fixture('insert/after').toString(), 'should insert the nodes');
+    var second = actual.findOne(function (node) {
+      return (
+        node.type === 'ExpressionStatement' &&
+        node.expression.type === 'CallExpression' &&
+        node.expression.callee.name === 'second'
+      );
+    });
+    var replacement = AST.fixture('simple').tree.body[0];
+    tree.swapNodes(second, replacement);
+    test.equal(actual.toString(), AST.fixture('insert/after-swap').toString(), 'should be able to swap the inserted node');
     test.done();
   },
 };
