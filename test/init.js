@@ -1,4 +1,4 @@
-global._ = require('underscore');
+global._ = require('lodash');
 global.AST = require('../lib/ast');
 global.fixtures = require('./fixtures');
 
