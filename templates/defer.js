@@ -1,4 +1,4 @@
-$declorator;
+$declarator;
 (function () {
   return function () {
     $setVariables;

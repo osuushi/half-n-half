@@ -76,7 +76,7 @@ exports['Tree utilities'] = {
       );
     });
     var replacement = AST.fixture('simple').tree.body[0];
-    tree.swapNodes(second, replacement);
+    tree.swapNodes(second.tree, replacement);
     test.equal(actual.toString(), AST.fixture('insert/after-swap').toString(), 'should be able to swap the inserted node');
     test.done();
   },
