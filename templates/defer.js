@@ -1,3 +1,4 @@
+$declorator;
 (function () {
   return function () {
     $setVariables;
